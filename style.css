@@ -9,14 +9,23 @@
 }
 
 html {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 h3, h1, p {
   color: #fff;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  transition: ease-in 0.8s all;
+}
+
+button:hover {
+  background-color: bisque;
 }
 
 .bg-home {
@@ -51,6 +60,13 @@ h3, h1, p {
 
 .content .menu-content li a {
   color: #fff;
+  transition: ease-in-out 0.8s all;
+}
+
+.content .menu-content li a:hover {
+  padding: 2rem 1rem;
+  background-color: #353436;
+  border-bottom: 2px solid bisque;
 }
 
 .logo {
@@ -209,7 +225,13 @@ h3, h1, p {
 }
 
 .menu-image img {
-  width: 8rem;
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.menu-image img:hover {
+  transform: scale(1.2);
 }
 
 .menu-info {
@@ -267,6 +289,16 @@ h3, h1, p {
   padding: 2.4rem;
 }
 
+.produtos-image img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.produtos-image img:hover {
+  transform: scale(1.2);
+}
+
 .produtos-info {
   display: flex;
   flex-direction: column;
@@ -288,7 +320,8 @@ h3, h1, p {
 
 @media screen and (max-width: 768px) {
   .produtos h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding-top: 2rem;
   }
 }
 .contato {
