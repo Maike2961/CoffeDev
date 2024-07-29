@@ -132,13 +132,27 @@ function calcular() {
 
 const finalizarPedido = () => {
     const finaliza = document.querySelector(".button")
-    const modal = document.querySelector(".modal-body")
+    const modalbody = document.querySelector(".modal-body")
 
     finaliza.addEventListener("click", () => {
-        console.log(modal)
-        alert("Pedido Finalizado")
-        document.getElementById("total").innerHTML = ""
-        modal.remove()
+        const modalItens = document.querySelectorAll(".itens")
+        console.log(modalItens.length)
+        if (modalItens.length > 0) {
+            document.getElementById("total").innerHTML = ""
+            modalItens.forEach(element => {
+                element.remove();
+            })
+            buttons.forEach(button => {
+                button.removeAttribute('disabled');
+            })
+            buttonsProdutos.forEach(buttonsProduto => {
+                buttonsProduto.removeAttribute('disabled');
+            })
+            modalbody.innerHTML = "Pedido finalizado"
+            setTimeout(function () {
+                modalbody.innerHTML = "";
+            }, 1000)
+        }
     })
 }
 
