@@ -12,6 +12,7 @@ html {
     width: 100%;
     height: 100vh;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h3, h1, p {
@@ -115,10 +116,7 @@ button:hover{
 }
 
 @media screen and (max-width: 768px) {
-    .content{
-        padding-top: 1rem;
-    }
-    .logo{
+    .content nav{ 
         display: none;
     }
     .text{
@@ -161,7 +159,7 @@ button:hover{
 }
 
 .image-about img{
-    width: 40rem;
+    width: 30rem;
     border-radius: 3rem;
 }
 
@@ -188,7 +186,7 @@ button:hover{
     }
 
     .image-about img{
-        width: 28rem;
+        width: 20rem;
     }
 
     .about-coffe{
@@ -274,14 +272,14 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 6rem;
 }
 
 .produtos h1{
     font-size: 3rem;
     font-weight: 200;
     letter-spacing: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 5rem;
 }
 
 .produtos .produtos-content{
@@ -376,8 +374,147 @@ footer h3{
     letter-spacing: .80rem;
 }
 
+.btn-compras img{
+    width: 2rem;
+}
+
+.btn-compras{
+    position: fixed;
+    bottom: 5.1rem;
+    margin-left: .90rem;
+    padding: .80rem;
+    z-index: 99;
+    border-radius: 5rem;
+    background-color: white;
+    transition: 200ms ease-out;
+}
+
+.btn-compras:hover{
+    background-color: #353436;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: auto;
+    width: 20rem;
+    background-color: white;
+    padding: .50rem;
+}
+
+.modal.active{
+    width: 50rem;
+    max-height: 40rem;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+    font-size: 1.5rem;
+}
+
+.close-button{
+    width: 1.5rem;
+    color: #090b0e;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal-body{
+    width: 100%;
+    max-height: 50%;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 1rem;
+}
+
 .back{
     background-color: #fff;
     padding: 0.9rem 1.5rem;
     border-radius: 5rem;
+}
+
+.modal.active .modal-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal.active .modal-body .itens{
+    display: flex;
+    justify-content: space-between;
+}   
+
+.modal.active .modal-body .pedido-itens p{
+    color: #090b0e;
+}
+.modal.active .modal-body .pedido-itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.modal.active .modal-body .quantidade button, .modal.active .modal-body .quantidade p{
+    width: 2rem;
+    color: #090b0e;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal.active .modal-body .quantidade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active .total{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal.active .total button{
+    color: rgb(255, 235, 235);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: .50rem;
+    background-color: #353436;
+}
+
+@media (max-width:768px) {
+    .modal.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 20rem;
+    }
+    
+    .modal.active .modal-body .itens{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+        padding-bottom: 1.2rem;
+    }
 }

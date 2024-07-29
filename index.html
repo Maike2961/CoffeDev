@@ -34,6 +34,8 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+
+
         </header>
 
         <main class="text" id="home">
@@ -64,60 +66,60 @@
         <h1>Nosso Menu</h1>
         <div class="contents">
             <div class="menu-image">
-                <img src="img/menu-1.png" alt="menu1">
+                <img src="img/menu-1.png" alt="menu1" class="cafe-image">
                 <div class="menu-info">
                     <h3>Cafe com leite</h3>
                     <p>R$ 5.50</p>
-                    <button>Add ao Carrinho</button>
+                    <button  class="add">Add ao Carrinho</button>
                 </div>
             </div>
             <div class="menu-image">
-                <img src="img/menu-2.png" alt="menu1">
+                <img src="img/menu-2.png" alt="menu1" class="cafe-image">
 
                 <div class="menu-info">
                     <h3>Cafe com leite</h3>
                     <p>R$ 5.50</p>
-                    <button>Add ao Carrinho</button>
-                </div>
-            </div>
-
-            <div class="menu-image">
-                <img src="img/menu-3.png" alt="menu1">
-
-                <div class="menu-info">
-                    <h3>Cafe com leite</h3>
-                    <p>R$ 5.50</p>
-                    <button>Add ao Carrinho</button>
+                    <button class="add">Add ao Carrinho</button>
                 </div>
             </div>
 
             <div class="menu-image">
-                <img src="img/menu-4.png" alt="menu1">
+                <img src="img/menu-3.png" alt="menu1" class="cafe-image">
 
                 <div class="menu-info">
                     <h3>Cafe com leite</h3>
                     <p>R$ 5.50</p>
-                    <button>Add ao Carrinho</button>
+                    <button class="add">Add ao Carrinho</button>
                 </div>
             </div>
 
             <div class="menu-image">
-                <img src="img/menu-5.png" alt="menu1">
+                <img src="img/menu-4.png" alt="menu1" class="cafe-image">
 
                 <div class="menu-info">
                     <h3>Cafe com leite</h3>
                     <p>R$ 5.50</p>
-                    <button>Add ao Carrinho</button>
+                    <button class="add">Add ao Carrinho</button>
                 </div>
             </div>
 
             <div class="menu-image">
-                <img src="img/menu-6.png" alt="menu1">
+                <img src="img/menu-5.png" alt="menu1" class="cafe-image">
 
                 <div class="menu-info">
                     <h3>Cafe com leite</h3>
                     <p>R$ 5.50</p>
-                    <button>Add ao Carrinho</button>
+                    <button class="add">Add ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="menu-image">
+                <img src="img/menu-6.png" alt="menu1" class="cafe-image"> 
+
+                <div class="menu-info">
+                    <h3>Cafe com leite</h3>
+                    <p>R$ 5.50</p>
+                    <button class="add">Add ao Carrinho</button>
                 </div>
             </div>
         </div>
@@ -164,6 +166,23 @@
         </div>
     </section>
 
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Examples</div>
+            <button class="close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+        </div>
+
+        <div class="total">
+            <h2 id="total">Total</h2>
+            <button>Finalizar</button>
+        </div>
+
+    </div>
+    <div id="overlay"></div>
+
     <footer>
         <h3>Desenvolvido por Mayki Costa</h3>
         <a href="#home">
@@ -173,7 +192,11 @@
         </a>
     </footer>
 
+    <a href="#" class="btn-compras">
+        <img src="img/carrinho-de-compras.png">
+    </a>
 
+<script src="script.js"></script>
 </body>
 
 </html>
