@@ -130,13 +130,14 @@ button:hover{
         font-size: 1.4rem;
     }
     .text p{
-        text-align: center;
+        text-align: left;
     }
     
 }
 
 .about{
     min-height: 100vh;
+    width: 100%;
     background-color: #090b0e;
     display: flex;
     flex-direction: column;
@@ -164,7 +165,8 @@ button:hover{
 }
 
 .about-coffe{
-    width: 40rem;
+    width: 100%;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -189,6 +191,10 @@ button:hover{
         width: 20rem;
     }
 
+    .about h1{
+        text-align: center;
+    }
+
     .about-coffe{
         width: 20rem;
     }
@@ -211,6 +217,7 @@ button:hover{
     font-size: 3rem;
     font-weight: 200;
     letter-spacing: 1rem;
+    text-align: center;
     margin-top: 1.5rem;
 }
 
@@ -332,7 +339,15 @@ button:hover{
 @media screen and (max-width: 768px) {
     .produtos h1{
         font-size: 2rem;
+        text-align: center;
         padding-top: 2rem;
+    }
+    .produtos-content{
+        width: 90%;
+    }
+
+    .produtos-content .produtos-info .add2{
+        width: 8rem;
     }
     
 }
@@ -518,4 +533,11 @@ footer h3{
         flex-direction: column;
         padding-bottom: 1.2rem;
     }
+    footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
 }
